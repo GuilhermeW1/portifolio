@@ -7,7 +7,10 @@ module.exports = {
       black: '#1a202c',//070000
       white: '#f5f5f5',
       orange: '#FCCB81',
-      gray: '#c4c4c4',
+      gray: {
+        200: '#c4c4c4',
+        400: '#525252'
+      },
       blue: '#5F3FBD',
       dark: {
         200: '#29272B',
@@ -16,6 +19,17 @@ module.exports = {
       light: {
         200: '#f4ede4',//f0e7db
         400: '#f0e7db',//f0e7db
+      },
+      green: {
+        100: '#2c3839',
+        200: '#81e6d9',
+        400: '#4fd1c5',
+        //used in light theme
+        300: '#E6FFFA',
+        500: '#319795',
+        600: '#2C7A7B',
+        //used in navbarlink
+        450: '#88ccca'
       }
     },
     extend: {
@@ -26,10 +40,25 @@ module.exports = {
         wiggle: {
           "0%": { transform: "translateY(-20px)", opacity: 0 },
           "100%" :  { transform: "translateY(0)", opacity: 1 }
+        },
+        section: {
+          "0%" : { transform: "translateY(10px)", opacity: 0},
+          "100%" : { transform: "translateY(0)", opacity: 1}
+        },
+        rotate: { 
+          "0%": { transform: "rotate(0)"},
+          "100%": {transform: "rotate(12deg)" }
+        },
+        rotateBack: { 
+          "0%": { transform: "rotate(0)"},
+          "100%": {transform: "rotate(-12deg)" }
         }
       },
       animation: {
-        wiggle: "wiggle 200ms ease-in"
+        wiggle: "wiggle 400ms ease-in",
+        section: "section 800ms ease-in",
+        rotate: "rotate 600ms ease forwards",
+        rotateBack: "rotateBack 400ms ease forwards"
       }
     },
   },

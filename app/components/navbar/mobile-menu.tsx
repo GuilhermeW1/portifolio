@@ -10,7 +10,7 @@ export default function MobileMenu({isDark}: ModalMenuProps){
   return(
     <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
-            <button aria-label="open menu" className="p-[11px] border border-black dark:border-white rounded block md:hidden">
+            <button aria-label="open menu" className="p-[11px] border border-black dark:border-white h-10 w-10 flex items-center rounded md:hidden">
               <HamburgerMenuIcon color={isDark ? "white" : "black"} className="w-5 h-5"/>
             </button>
           </DropdownMenu.Trigger>

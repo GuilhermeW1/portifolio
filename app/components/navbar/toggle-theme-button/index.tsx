@@ -16,7 +16,7 @@ export default function ToggleTheme(){
 
   return(
     <button 
-      className={`${animation && "animate-wiggle"} rounded dark:bg-orange bg-blue p-3 will-change-transform`}
+      className={`${animation && "animate-wiggle"} rounded flex items-center dark:bg-orange bg-blue h-10 w-10 p-3 will-change-transform`}
       onClick={toggleTheme}
       aria-label="Toggle Theme"
       onAnimationEnd={() => setAnimation(false)}
