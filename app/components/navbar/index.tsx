@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 import { Theme } from "~/ui/theme/utils";
 import { useTheme } from "~/ui/theme/theme-provider";
-import ToggleTheme from "./toggle-theme-button";
+import ToggleTheme from "./toogle-theme-button";
 
 
 import MobileMenu from "./mobile-menu";

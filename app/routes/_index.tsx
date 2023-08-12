@@ -2,7 +2,7 @@ import type { V2_MetaFunction } from "@remix-run/node";
 import Navbar from "~/components/navbar";
 import Section from "~/components/section";
 
-import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 import profilePic from "../images/profilepic.jpeg";
 import { Link, useMatches } from "@remix-run/react";
@@ -23,7 +23,7 @@ export default function Index() {
         <Navbar route={route}/>
       </header>
       <main 
-        className="flex flex-col items-center max-w-[532px] m-auto pt-14 px-4 text-black"
+        className="flex flex-col items-center max-w-[532px] m-auto pt-14 px-4 text-black animate-section"
       >
         {/* <div className="min-w-[600px] min-h-[600px] bg-white">
           <p>canva</p>
@@ -70,7 +70,7 @@ export default function Index() {
 
           <div className="dark:text-white">
             <span className="mr-4 font-semibold">2022</span>
-            Complete the thechnical course in UNIVATES 
+            Complete the IT thechnical course at UNIVATES 
           </div>
 
           <div className="dark:text-white">
@@ -133,6 +133,22 @@ export default function Index() {
                 className="mr-2"
               />
               @linkedin
+            </button>            
+          </a>
+
+          <a 
+            href="mailto:guilherme.w1@gmail.com"
+            className="block w-fit"
+          >
+            <button
+              className="flex items-center cursor-pointer h-10 px-4 text-green-600 font-semibold rounded hover:bg-green-300 dark:text-green-200 dark:hover:bg-green-100 w-fit m-0"
+            >
+              <EnvelopeClosedIcon
+                width={16} 
+                height={16} 
+                className="mr-2"
+              />
+              guilherme.w1@gmail.com
             </button>            
           </a>
         </Section>
