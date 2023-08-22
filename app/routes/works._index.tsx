@@ -1,7 +1,7 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { useMatches } from "@remix-run/react";
 import Navbar from "~/components/navbar";
-import WorkSection from "~/components/workSection";
+import WorkSectionLink from "~/components/workSection";
 
 import DiogoAppPik from "~/images/portifoplio-background-diogo-app.png";
 import DockerApp from "~/images/desktop.png";
@@ -25,9 +25,8 @@ export default function Works(){
           <Navbar route={route}/>
       </header>
       <main 
-        className="max-w-[532px] m-auto pt-16 p-4"
+        className="max-w-[532px] m-auto pt-16 p-4 animate-section"
       >
-        
         <h2
           className="dark:text-white font-semibold text-2xl mb-4"
         >
@@ -37,18 +36,21 @@ export default function Works(){
         <div 
           className="grid md:grid-cols-2 grid-cols-1 gap-6"
         >
-          <WorkSection
+          <WorkSectionLink
             img={DiogoAppPik}
+            link="/works/xp-app"
             title="XP app"
             subtext="A simple shcedule app to gerenciar commerce of manicure or another service and product"
           />
-          <WorkSection
+          <WorkSectionLink
             img={DockerApp}
+            link="/works/docker-app"
             title="Docker App"
             subtext="An app made to train my docker concepts,  with a api and a responsive front-end design"
           />
-          <WorkSection
+          <WorkSectionLink
             img={ExcelCsv}
+            link="/works/excel-to-csv"
             title="Excel to CSV converter"
             subtext="App to convert excel files to csv files"
           />

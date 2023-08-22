@@ -1,12 +1,18 @@
+import { Link } from "@remix-run/react";
+
 interface WorkSectionProps {
   img: string;
   title: string;
-  subtext: string
+  subtext: string;
+  link: string;
 }
 
-export default function WorkSection({img, title, subtext}: WorkSectionProps){
+export default function WorkSectionLink({img, title, subtext, link}: WorkSectionProps){
   return(
-    <section className="mb-4">
+    <Link 
+      className="mb-4"
+      to={link}
+    >
       <img 
         src={img} 
         alt="Pick app rn"
@@ -26,6 +32,6 @@ export default function WorkSection({img, title, subtext}: WorkSectionProps){
           {subtext}
         </p>
       </div>
-    </section>
+    </Link>
   );
 }
