@@ -1,7 +1,11 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { useMatches } from "@remix-run/react";
 import Navbar from "~/components/navbar";
+import WorkSection from "~/components/workSection";
+
 import DiogoAppPik from "~/images/portifoplio-background-diogo-app.png";
+import DockerApp from "~/images/desktop.png";
+import ExcelCsv from "~/images/excel-csv.png";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -30,29 +34,25 @@ export default function Works(){
           Works
         </h2>
 
-        <section 
-          className="flex items-center justify-center flex-col"
+        <div 
+          className="grid md:grid-cols-2 grid-cols-1 gap-6"
         >
-          <img 
-            src={DiogoAppPik} 
-            alt="Pick app rn"
-            className="rounded-3xl max-h-[320px] max-w-full w-full object-cover "
-            loading="lazy"
+          <WorkSection
+            img={DiogoAppPik}
+            title="XP app"
+            subtext="A simple shcedule app to gerenciar commerce of manicure or another service and product"
           />
-          <div 
-            className="dark:text-white flex flex-col"
-          >
-            <h3 
-              className="text-xl self-center"
-            >
-              XP app
-            </h3>
-
-            <p className="text-sm">
-              A simple shcedule app to gerenciar commerce of manicure or another service and product 
-            </p>
-          </div>
-        </section>
+          <WorkSection
+            img={DockerApp}
+            title="Docker App"
+            subtext="An app made to train my docker concepts,  with a api and a responsive front-end design"
+          />
+          <WorkSection
+            img={ExcelCsv}
+            title="Excel to CSV converter"
+            subtext="App to convert excel files to csv files"
+          />
+        </div>
       </main>
     </>
   );

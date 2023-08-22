@@ -18,9 +18,17 @@ export default function Logo({isDark}: LogoProps){
       onMouseLeave={() => setRotate(false)}
       className="flex flex-row items-center justify-center ">
       {isDark ?
-        <img src={paw} alt='paw icon' className={`${rotate ? "animate-rotate" : 'animate-rotateBack'} w-4 h-4 transform -rotate-12`}/> 
+        <img 
+          src={paw} 
+          alt='paw icon' 
+          loading="lazy" 
+          className={`${rotate ? "animate-rotate" : 'animate-rotateBack'} w-4 h-4 transform -rotate-12`}/> 
       : 
-        <img src={pawDark} alt='paw icon' className={`${rotate ? "animate-rotate" : 'animate-rotateBack'} w-4 h-4 transform -rotate-12`}/>
+        <img 
+          src={pawDark} 
+          alt='paw icon' 
+          loading="lazy"
+          className={`${rotate ? "animate-rotate" : 'animate-rotateBack'} w-4 h-4 transform -rotate-12`}/>
       }
           
       <h2 className="text-lg font-semibold ml-1 text-black dark:text-white">Guilherme Weissheimer</h2>
