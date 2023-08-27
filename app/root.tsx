@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
   isRouteErrorResponse,
   useLoaderData,
+  useMatches,
   useRouteError,
 } from "@remix-run/react";
 
@@ -16,6 +17,7 @@ import stylesheet from '~/tailwind.css';
 import { ThemeProvider } from "./ui/theme/theme-provider";
 import { getTheme } from "./ui/theme/getTheme";
 import { Theme } from "./ui/theme/utils";
+import Navbar from "./components/navbar";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -53,6 +55,9 @@ export function ErrorBoundary(){
 export default function App() {
   const data = useLoaderData<typeof loader>();
   const { theme } = data;
+  const matches = useMatches();
+  const [,route] = matches.map(route => route.pathname);
+
   return (  
     <html lang="en" className={theme === Theme.DARK ? 'dark' : ""}>
       <head>
@@ -63,7 +68,12 @@ export default function App() {
       </head>
       <body className=" bg-light-400 dark:bg-dark-400">
         <ThemeProvider theme={theme}>
-          <Outlet />
+          <>
+          <header className="h-14 fixed z-[2] top-0 left-0 right-0 flex backdrop-blur gap-1 items-center bg-light-200 dark:bg-dark-400">
+            <Navbar route={route}/>
+          </header>
+            <Outlet />
+          </>
         </ThemeProvider>
         <ScrollRestoration />
         <Scripts />

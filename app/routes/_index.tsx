@@ -1,11 +1,10 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import Navbar from "~/components/navbar";
 import Section from "~/components/section";
 
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 import profilePic from "../images/profilepic.jpeg";
-import { Link, useMatches } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -15,13 +14,9 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
-  const matches = useMatches();
-  const [,route] = matches.map(route => route.pathname);
+
   return (
     <>
-      <header className="h-14 fixed z-[2] top-0 left-0 right-0 flex backdrop-blur gap-1 items-center bg-light-200 dark:bg-dark-400">
-        <Navbar route={route}/>
-      </header>
       <main 
         className="flex flex-col items-center max-w-[532px] m-auto pt-14 px-4 text-black animate-section"
       >
