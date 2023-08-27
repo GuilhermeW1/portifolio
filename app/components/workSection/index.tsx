@@ -5,9 +5,10 @@ interface WorkSectionProps {
   title: string;
   subtext: string;
   link: string;
+  alt: string
 }
 
-export default function WorkSectionLink({img, title, subtext, link}: WorkSectionProps){
+export default function WorkSectionLink({img, title, subtext, link, alt}: WorkSectionProps){
   return(
     <Link 
       className="mb-4"
@@ -15,7 +16,7 @@ export default function WorkSectionLink({img, title, subtext, link}: WorkSection
     >
       <img 
         src={img} 
-        alt="Pick app rn"
+        alt={alt}
         className="rounded-xl md:max-h-[158px] max-h-[300px] md:max-w-[240px] w-full md:h-full object-fill"
         loading="lazy"
       />
