@@ -13,7 +13,6 @@ interface NavbarProps {
 }
 
 function Navbar({route}: NavbarProps){
-  console.log(route);
   const { theme } = useTheme();
   const isDark = theme === Theme.DARK;
 

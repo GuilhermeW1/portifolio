@@ -6,6 +6,7 @@ import WorkSectionLink from "~/components/workSection";
 import DiogoAppPik from "~/images/portifoplio-background-diogo-app.png";
 import DockerApp from "~/images/desktop.png";
 import ExcelCsv from "~/images/excel-csv.png";
+import TikTakToe from "~/images/tik-tak-toe.png";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -53,6 +54,12 @@ export default function Works(){
             link="/works/excel-to-csv"
             title="Excel to CSV converter"
             subtext="App to convert excel files to csv files"
+          />
+          <WorkSectionLink
+            img={TikTakToe}
+            link="/works/tik-tak-toe-multiplayer"
+            title="Tik Tak Toe Multiplayer"
+            subtext="Create rooms and play with your friends"
           />
         </div>
       </main>
