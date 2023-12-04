@@ -18,11 +18,8 @@ export default function Index() {
   return (
     <>
       <main 
-        className="flex flex-col items-center max-w-[532px] m-auto pt-14 px-4 text-black animate-section"
+        className="flex flex-col items-center max-w-[532px] m-auto  px-4 text-black animate-section"
       >
-        {/* <div className="min-w-[600px] min-h-[600px] bg-white">
-          <p>canva</p>
-        </div> */}
 
         <p className="flex items-center justify-center text-black p-3 rounded-lg bg-light-200 mb-6 dark:bg-dark-200 dark:text-white w-full">Hello, I&apos;m a fullstack developer based in Brazil</p>
 
@@ -148,11 +145,6 @@ export default function Index() {
           </a>
         </Section>
       </main>
-      <footer 
-        className="text-sm text-gray-400 justify-center flex pb-8 pt-3"
-      >
-        &copy; 2023 Guilherme Weissheimer. All Rights Reserved.
-      </footer>
     </>
   );
 }

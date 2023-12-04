@@ -38,6 +38,17 @@ export default function MobileMenu({isDark}: ModalMenuProps){
                   About
                 </Link>
               </DropdownMenu.Item>
+
+              <DropdownMenu.Item className="p-2">
+                <a 
+                  href="https://github.com/GuilhermeW1/portifolio" 
+                  rel="noreferrer"
+                  target="_blank"
+                  className=" dark:text-black"
+                >
+                  View Source
+                </a>
+              </DropdownMenu.Item>
             </DropdownMenu.Content>
           </DropdownMenu.Portal>
         </DropdownMenu.Root>

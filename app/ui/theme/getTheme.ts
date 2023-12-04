@@ -1,6 +1,6 @@
 import { createCookieSessionStorage } from "@remix-run/node";
-import type { Theme} from "./utils";
-import { DEFAULT_THEME, isTheme } from "./utils";
+import type { Theme } from "./utils";
+import { DEFAULT_THEME, getPreferredTheme, isTheme } from "./utils";
 
 const themeStorage = createCookieSessionStorage({
   cookie: {
@@ -33,12 +33,17 @@ async function getTheme(request: Request): Promise<{theme: Theme}>{
   if(themeSes){
     return {theme: themeSes};
   }
-
+  
   const headerValue = request.headers.get('sec-ch-prefers-color-scheme');
   if(isTheme(headerValue)){
     return {theme: headerValue};
   }
-
+  
+  const userPrefValue  = getPreferredTheme(null);
+  if (isTheme(userPrefValue)){
+    return { theme: userPrefValue };
+  }
+  
   return {theme: DEFAULT_THEME};
 }
 

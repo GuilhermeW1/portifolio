@@ -27,9 +27,11 @@ module.exports = {
         //used in light theme
         300: '#E6FFFA',
         500: '#319795',
-        600: '#2C7A7B',
+        600: '#2C7A7B',//#34403A
         //used in navbarlink
-        450: '#88ccca'
+        450: '#88ccca', 
+        //used in works/platforms,linksetc
+        150: '#34403A'
       }
     },
     extend: {
@@ -52,13 +54,19 @@ module.exports = {
         rotateBack: { 
           "0%": { transform: "rotate(0)"},
           "100%": {transform: "rotate(-12deg)" }
+        },
+        onOff: {
+          "0%": { opacity: 0 },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0 }
         }
       },
       animation: {
         wiggle: "wiggle 400ms ease-in",
         section: "section 800ms ease-in",
         rotate: "rotate 600ms ease forwards",
-        rotateBack: "rotateBack 400ms ease forwards"
+        rotateBack: "rotateBack 400ms ease forwards",
+        onOff: "onOff 1500ms infinite"
       }
     },
   },
